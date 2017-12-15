@@ -12,7 +12,7 @@
 <body>
 	<div align="center" class="container">
 	<h1 align="center">SIGN IN HERE</h1>
-	<form action="" method="POST">
+	<form action="../Model/AddUser.php" method="POST">
 		 <div class="form-group">
 			
 			<table>
@@ -30,23 +30,19 @@
 				</tr>
 				<tr>
 					<td>PASSWORD:</td>
-					<td><input type="text" class="form-control" name="email"></td>
+					<td><input type="text" class="form-control" name="pass"></td>
 				</tr>
 				<tr>
 					<td>DATE OF BIRTH</td>
-					<td><input type="date" class="form-control" name="date"></td>
-				</tr>
-				<tr>
-					<td>PHONE</td>
-					<td><input type="phone" class="form-control" name="phone"></td>
+					<td><input type="date" class="form-control" name="birth"></td>
 				</tr>
 				<tr>
 					<td>ADDRESS</td>
-					<td><input type="text" class="form-control" name="address"></td>
+					<td><input type="text" class="form-control" name="area"></td>
 				</tr>
 				<tr >
 					
-					<td><input type="submit" id="btn" class="btn btn-success" name="register"></td>
+					<td><input type="submit" id="btn" class="btn btn-success" ></td>
 				</tr>
 			</table>
 			 <div class="form-group">
