@@ -20,19 +20,32 @@ $Mail= $_POST['Mail'];
 $Pass = $_POST['Pass'];
 
 
-$result = "Select * From has_user where Email='$Mail' AND Password='$Pass'";
+$resultAdmin = "Select * From admin where email='$Mail' AND password='$Pass'";
+$reqAdmin = mysql_query($resultAdmin);
+$ligneAdmin= mysql_fetch_array($reqAdmin);
 
+$result = "Select * From has_user where Email='$Mail'";
 $req = mysql_query($result);
 $ligne= mysql_fetch_array($req);
 
+
 	
-	if(($ligne['Email']== $Mail && $ligne['Password']== $Pass)){
+	if(($ligneAdmin['email']== $Mail && $ligneAdmin['password']== $Pass)  ){
+		
+		header('Location:../Model/Admin.php');
+}
+
+
+
+	if(($ligne['Email']== $Mail && password_verify($Pass,$ligne['Password']))  ){
 		session_start();
 		$_SESSION['ID']= $ligne['User_ID'];
 		$_SESSION['Email']= $ligne['Email'];
 		$_SESSION['Password']= $ligne['Password'];
 		$_SESSION['FirstName']= $ligne['FirstName'];
 		$_SESSION['LastName']= $ligne['LastName'];
+		$_SESSION['Address']= $ligne['Address'];
+
 		
 		header('Location:../Model/UserPage.php');
 }

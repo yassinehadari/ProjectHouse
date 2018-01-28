@@ -51,7 +51,8 @@
     <input class="main-form__input" name="area" type="text" placeholder="Your Address" />
     <?php }?>
 
-    <button type="submit" class="btn">Register</button>
+    <button type= "submit" class="btn" style="margin-left: 27%;">Register</button>
+    <a href="../View/Html/home.html" class="btn" style="text-align: center; text-decoration: none; background-color: #3CB371;"> Home </a>
   </div>
 </form>  
 

@@ -43,11 +43,9 @@ session_start();
 
             	<p><span class="fontawesome-lock"></span><input  name="Pass" type="password"  placeholder="*******" required></p> 
             	<p><input type="submit" value="Sign In" style="cursor: pointer;" ></p>
-
           </fieldset>
 
         </form>
-
         <p>Not a member?<a href="../Model/SignUp.php" class="blue"> Sign up now</a><span class="fontawesome-arrow-right"></span></p>
 
       </div>
